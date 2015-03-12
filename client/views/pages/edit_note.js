@@ -3,6 +3,10 @@ Template.editNote.created = function() {
   Session.set(templateName + 'Validator', {});
 }
 
+Template.editNote.rendered = function() {
+  $('#tags').tagsInput();
+}
+
 Template.editNote.events({
   'submit form': function(e) {
     e.preventDefault();
@@ -11,7 +15,8 @@ Template.editNote.events({
 
     var note = {
       name: $(e.target).find('[name=name]').val(),
-      content: $(e.target).find('[name=content]').val()
+      content: $(e.target).find('[name=content]').val(),
+      tags: $(e.target).find('[name=tags]').val()
     };
 
     var validator = validateNote(note);
