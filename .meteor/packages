@@ -8,3 +8,5 @@ meteor-platform
 nemo64:bootstrap
 less
 iron:router
+accounts-password
+ian:accounts-ui-bootstrap-3
