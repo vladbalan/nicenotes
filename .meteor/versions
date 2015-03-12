@@ -18,6 +18,7 @@ id-map@1.0.3-winr.2
 jquery@1.11.3-winr.2_1
 json@1.0.3-winr.2
 launch-screen@1.0.2-winr.4
+less@1.0.13-winr.3
 livedata@1.0.13-winr.2
 logging@1.0.7-winr.3
 meteor@1.1.5-winr.6
@@ -26,6 +27,8 @@ minifiers@1.1.4-winr.4
 minimongo@1.0.7-winr.4
 mobile-status-bar@1.0.3-winr.3
 mongo@1.0.12-winr.7
+nemo64:bootstrap@3.3.1_1
+nemo64:bootstrap-data@3.3.1_1
 observe-sequence@1.0.5-winr.3
 ordered-dict@1.0.3-winr.2
 random@1.0.3-winr.2
