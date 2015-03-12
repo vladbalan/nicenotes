@@ -7,6 +7,9 @@
 body {
   padding-top: 50px;
 }
+h1, h2, h3 {
+  color: lighten(@gray-light, 20%);
+}
 footer {
   padding-left: 15px;
   padding-right: 15px;
@@ -25,12 +28,34 @@ footer {
 .notes {
   list-style: outside none none;
   margin: 0;
-  li {
+  .note {
     box-shadow: 2px 2px 4px #bbb;
-    height: 230px;
+    color: desaturate(darken(@brand-primary, 20%), 30%);
     margin: 14px 0;
-    padding: 10px;
+    padding: 10px 20px 18px;
+    p {
+      height: 150px;
+      line-height: 25px;
+      overflow: hidden;
+    }
+    h4 {
+      font-weight: bold;
+      height: 21px;
+      letter-spacing: 1.5px;
+      overflow: hidden;
+    }
+    .btn-toolbar {
+      .opacity(0);
+      .transition(all 0.5s ease)
+    }
+    &:hover .btn-toolbar {
+      .opacity(1);
+    }
   }
+}
+.navbar-fixed-top {
+  background-color: @body-bg;
+  border-color: @gray-lighter;
 }
 /*
  * Off Canvas
