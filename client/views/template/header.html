@@ -11,19 +11,12 @@
 			    </ul>
 
 	            <ul class="nav navbar-nav navbar-right">
-	                <li>
-	                    <a href="#">Dashboard</a>
-	                </li>
-					{{#if currentUser}}
+	                {{#if currentUser}}
 	                <li>
 	                    <a href="{{pathFor 'createNote'}}">Create note</a>
 	                </li>
 	                {{/if}}
 	            </ul>
-
-	            <form class="navbar-form navbar-right">
-	                <input class="form-control" placeholder="Search..." type="text">
-	            </form>
 	        </div>
 	    </div>
 	</nav>
