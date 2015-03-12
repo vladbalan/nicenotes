@@ -2,12 +2,7 @@
 	<h1 class="page-header">Dashboard</h1>
 	<ul class="notes">
 		{{#each notes}}
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-				<li style="background-color:{{color}}">
-					<h4>{{name}}</h4>
-					<p>{{content}}</p>
-				</li>
-			</div>
+			{{> note}}
 		{{/each}}
 	</ul>
 </template>
