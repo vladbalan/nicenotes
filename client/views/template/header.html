@@ -14,10 +14,11 @@
 	                <li>
 	                    <a href="#">Dashboard</a>
 	                </li>
-
+					{{#if currentUser}}
 	                <li>
-	                    <a href="#">Create note</a>
+	                    <a href="{{pathFor 'createNote'}}">Create note</a>
 	                </li>
+	                {{/if}}
 	            </ul>
 
 	            <form class="navbar-form navbar-right">
