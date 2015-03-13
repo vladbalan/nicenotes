@@ -1,0 +1,36 @@
+<template name="shareModal">
+	<div id="share-modal" class="modal fade">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">Share this note</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>Share "<span id="share-modal-name"></span>" with:</p>
+	        <div class="form-group {{errorClass 'email' 'shareModal'}}">
+			<div class="controls">
+         		<input name="email" id="share-modal-email" type="text" value="" placeholder="Friend's email address" class="form-control"/>
+      			<span class="help-block">{{errorMessage 'email' 'shareModal'}}</span>
+      		</div>
+      		<p>Your friend may:</p>
+      		<div class="btn-group {{errorClass 'write' 'shareModal'}}" data-toggle="buttons">
+			  <label class="btn btn-info active">
+			    <input type="radio" name="write" autocomplete="off" value="0" checked> Read
+			  </label>
+			  <label class="btn btn-warning">
+			    <input type="radio" name="write" autocomplete="off" value="1"> Read and Edit
+			  </label>
+      		  <span class="help-block">{{errorMessage 'write' 'shareModal'}}</span>
+			</div>
+	    </div>
+	      </div>
+	      <div class="modal-footer">
+	      	<input type="hidden" name="note-id" id="share-modal-note-id" value="" autocomplete="off">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary" id="share-modal-submit">Share</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+</template>

@@ -29,7 +29,7 @@
   "panels":               false,
   "responsive-embed":     false,
   "wells":                false,
-  "close":                false,
+  "close":                true,
 
   "component-animations": true,
   "dropdowns":            true,

@@ -11,15 +11,7 @@
 			<div class="btn-group pull-right" role="group" aria-label="Options">
 				<a href="{{pathFor 'editNote'}}" class="btn btn-xs btn-info" title="Edit" aria-label="Edit"><span class="glyphicon glyphicon-edit"></span></a>
 				<button type="button" class="btn btn-xs btn-danger delete" title="Delete" aria-label="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-				<div class="btn-group" role="group">
-					<button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Share" aria-label="Share">
-						<span class="glyphicon glyphicon-share-alt"></span>
-					</button>
-					<ul class="dropdown-menu dropdown-menu-right" role="menu">
-						<li><a href="#">Read</a></li>
-						<li><a href="#">Read / Write</a></li>
-					</ul>
-				</div>
+				<button type="button" class="btn btn-xs btn-primary share" title="Share" aria-label="Share" data-toggle="modal" data-target="#share-modal"><span class="glyphicon glyphicon-share-alt"></span></button>
 			</div>
 		</div>
 	</li>

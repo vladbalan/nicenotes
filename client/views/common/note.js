@@ -6,6 +6,12 @@ Template.note.events({
       var noteId = this._id;
       Notes.remove(noteId);
     }
+  },
+  'click .share': function(e) {
+    e.preventDefault();
+    
+    $("#share-modal-name").html(this.name);
+    $("#share-modal-note-id").val(this._id);
   }
 });
 
