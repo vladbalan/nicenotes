@@ -22,7 +22,7 @@ $ curl https://install.meteor.com/ | sh
 ```
 ... Then just clone and start the app:
 ```sh
-$ git clone https://github.com/vladbalan/notes.git
+$ git clone https://github.com/vladbalan/nicenotes.git
 $ cd notes
 $ meteor
 ```
