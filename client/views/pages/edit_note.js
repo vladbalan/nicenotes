@@ -28,7 +28,7 @@ Template.editNote.events({
         // display the error to the user
         throwError(error.reason);
       } else {
-        Router.go('dashboard', {_id: noteId});
+        Router.go('note', {_id: noteId});
       }
     });
   },
