@@ -57,28 +57,71 @@ footer {
   &:hover .btn-toolbar {
     .opacity(1);
   }
+  &:hover li.tag {
+    border-color: @brand-primary;
+  }
 }
 .navbar-fixed-top {
   background-color: @body-bg;
   border-color: @gray-lighter;
 }
-div.tagsinput span.tag {
+.tag, div.tagsinput span.tag {
   color: @brand-primary;
   border: 1px solid;
   background-color: lighten(@brand-primary, 40%);
   border-radius: @border-radius-base;
 }
-
-div.tagsinput span.tag a {
+.tag, div.tagsinput span.tag a {
     color: @brand-primary;
 }
-
+li.tag {
+    background-color: transparent;
+    border-color: transparent;
+    display: inline-block;
+    margin-bottom: 3px;
+    padding: 2px 5px;
+    .transition(all 0.5s ease)
+}
 .tagsinput {
   border-radius: @border-radius-base;
   width: 100% !important;
 }
+.tags {
+    height: 29px;
+    list-style: outside none none;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+}
+/* Sidebar navigation */
+.nav-sidebar {
+  background-color: @body-bg;
+  margin-right: -15px;
+  margin-bottom: 20px;
+  margin-left: -15px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a {
+  color: #fff;
+  background-color: #428bca;
+}
 /*
- * Off Canvas
+ * Main content
+ */
+.main {
+  padding: 20px;
+  background-color: #fff;
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+/*
+ * Media queries
  * --------------------------------------------------
  */
 @media (max-width: (@screen-sm-min - 1)) {
@@ -104,33 +147,12 @@ div.tagsinput span.tag a {
     width: 33%;
     margin-left: 10px;
   }
+  .note p {
+    height: auto;
+    line-height: 30px;
+  }
 }
 
-
-/* Sidebar navigation */
-.nav-sidebar {
-  background-color: @body-bg;
-  margin-right: -15px;
-  margin-bottom: 20px;
-  margin-left: -15px;
-}
-.nav-sidebar > li > a {
-  padding-right: 20px;
-  padding-left: 20px;
-}
-.nav-sidebar > .active > a {
-  color: #fff;
-  background-color: #428bca;
-}
-
-/*
- * Main content
- */
-
-.main {
-  padding: 20px;
-  background-color: #fff;
-}
 @media (min-width: @screen-sm-min) {
   .main {
     padding-right: 40px;
@@ -139,7 +161,20 @@ div.tagsinput span.tag a {
   button[data-toggle="offcanvas"] {
     display: none;
   }
+  .note p {
+    height: 150px;
+    line-height: 25px;
+  }
 }
-.main .page-header {
-  margin-top: 0;
+
+@media (min-width: @screen-md-min) {
+  .note p {
+    height: 120px;
+  }
+}
+
+@media (min-width: @screen-lg-min) {
+  .note p {
+    height: 150px;
+  }
 }

@@ -8,3 +8,9 @@ Template.note.events({
     }
   }
 });
+
+Template.note.helpers({
+	tagsArray: function() {
+		return this.tags.split(',');
+	}
+});

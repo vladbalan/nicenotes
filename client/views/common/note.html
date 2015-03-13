@@ -2,6 +2,11 @@
 	<li class="note" style="background-color:{{color}}">
 		<h4><a href="{{pathFor 'note'}}">{{name}}</a></h4>
 		<p>{{content}}</p>
+		<ul class="tags">
+			{{#each tagsArray}}
+				<li class="tag">{{this}}</li>
+			{{/each}}
+		</ul>
 		<div class="btn-toolbar" role="toolbar">
 			<div class="btn-group pull-right" role="group" aria-label="Options">
 				<a href="{{pathFor 'editNote'}}" class="btn btn-xs btn-info" title="Edit" aria-label="Edit"><span class="glyphicon glyphicon-edit"></span></a>
@@ -17,12 +22,5 @@
 				</div>
 			</div>
 		</div>
-		{{#if fullView}}
-			<ul class="tags">
-				<li class="tag">foo</li>
-				<li class="tag">bar</li>
-				<li class="tag">baz</li>
-			</ul>
-		{{/if}}
 	</li>
 </template>
