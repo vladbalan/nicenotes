@@ -1,19 +1,19 @@
 <template name="sidebar">
 	<div class="col-sm-3 col-md-2 sidebar-offcanvas" id="sidebar">
         <ul class="nav nav-sidebar">
-            <li>
+            <li class="{{activeRouteClass 'allNotes'}}">
                 <a href="{{pathFor 'allNotes'}}">All notes</a>
             </li>
 
-            <li>
+            <li class="{{activeRouteClass 'createdNotes'}}">
                 <a href="{{pathFor 'createdNotes'}}">Created notes</a>
             </li>
 
-            <li>
+            <li class="{{activeRouteClass 'sharedNotes'}}">
                 <a href="{{pathFor 'sharedNotes'}}">Shared notes</a>
             </li>
 
-            <li>
+            <li class="{{activeRouteClass 'createNote'}}">
                 <a href="{{pathFor 'createNote'}}">Create a note</a>
             </li>
         </ul>

@@ -22,7 +22,11 @@ h1, h2, h3 {
 footer {
   padding-left: 15px;
   padding-right: 15px;
-  background-color: #fff;
+  background-color: @body-bg;
+  color: lighten(@gray-light, 20%);
+}
+.form-control {
+  box-shadow: 0 0 0 @gray-lighter;
 }
 .jumbotron {
   text-align: center;
@@ -88,9 +92,13 @@ li.tag {
     padding: 2px 5px;
     .transition(all 0.5s ease)
 }
-.tagsinput {
+div.tagsinput {
+  border-color: @input-border;
   border-radius: @border-radius-base;
   width: 100% !important;
+  input {
+    color: @input-color-placeholder !important;
+  }
 }
 .tags {
     height: 29px;
@@ -100,30 +108,46 @@ li.tag {
     padding: 0;
     width: 100%;
 }
-/* Sidebar navigation */
 .nav-sidebar {
   background-color: @body-bg;
-  margin-right: -15px;
   margin-bottom: 20px;
   margin-left: -15px;
+  li {
+    a {
+      padding-right: 20px;
+      padding-left: 20px;
+      .transition(all 0.5s ease);
+      &:hover, &:focus {
+        background-color: @brand-primary;
+        color: @gray-lighter;
+      }
+    }
+  }
+  .active {
+    a {
+      background-color: @brand-primary;
+      color: @body-bg;
+    }
+  }
 }
-.nav-sidebar > li > a {
-  padding-right: 20px;
-  padding-left: 20px;
+.search-input {
+  margin-bottom: 14px;
 }
-.nav-sidebar > .active > a {
-  color: #fff;
-  background-color: #428bca;
-}
-/*
- * Main content
- */
 .main {
   padding: 20px;
-  background-color: #fff;
+  background-color: @body-bg;
 }
 .main .page-header {
   margin-top: 0;
+}
+button.btn-toggle-sidebar, button.btn-toggle-sidebar:hover, button.btn-toggle-sidebar:active, button.btn-toggle-sidebar:focus {
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  color: @brand-primary;
+  font-size: 24px;
+}
+.notes {
+  padding: 0;
 }
 
 /*
@@ -133,9 +157,7 @@ li.tag {
 @media (max-width: (@screen-sm-min - 1)) {
   .row-offcanvas {
     position: relative;
-    -webkit-transition: all 0.25s ease-out;
-    -moz-transition: all 0.25s ease-out;
-    transition: all 0.25s ease-out;
+    .transition(all 0.25s ease-out);
   }
 
   .row-offcanvas-left
