@@ -11,8 +11,17 @@ Meteor.publish('sharedNotes', function(id) {
   return Notes.find({ _id: { $in: sharedNotesIds } });
 });
 
-Meteor.publish('note', function(id) {
-  return Notes.find(id);
+Meteor.publish('note', function(id, userId) {
+
+  var notes = Notes.find({_id: id, userId: userId});
+  if (! notes.count()) {
+    var shares = Shares.find({friendId: userId, noteId: id});
+    if (shares.count()) {
+      notes = Notes.find({_id: id});
+    }
+  }
+  
+  return notes;
 });
 
 // TODO: find a better way to search through emails without publishing all users
