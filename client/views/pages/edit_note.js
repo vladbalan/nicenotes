@@ -39,7 +39,7 @@ Template.editNote.events({
     if (confirm("Delete this note?")) {
       var noteId = this._id;
       Notes.remove(noteId);
-      Router.go('dashboard');
+      Router.go('myNotes');
     }
   }
 });

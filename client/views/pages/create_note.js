@@ -23,7 +23,7 @@ Template.createNote.events({
 
     Meteor.call('noteInsert', note, function(error, result) {
       if (! error) {
-        Router.go('dashboard', {_id: result._id});  
+        Router.go('myNotes', {_id: result._id});  
       }
     });
   }

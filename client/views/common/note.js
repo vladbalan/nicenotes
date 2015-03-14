@@ -17,6 +17,6 @@ Template.note.events({
 
 Template.note.helpers({
 	tagsArray: function() {
-		return this.tags.split(',');
+		return (!! this.tags && this.tags.length > 0) ? this.tags.split(',') : [];
 	}
 });
