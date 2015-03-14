@@ -1,5 +1,9 @@
 @import "custom.bootstrap.import.less";
-
+.saturate(@value) {
+  filter: saturate(@value);
+  -ms-filter: saturate(@value);
+  -webkit-filter: saturate(@value);
+}
 /*
  * Style tweaks
  * --------------------------------------------------
@@ -51,10 +55,12 @@ footer {
     overflow: hidden;
   }
   .btn-toolbar {
-    .opacity(0);
+    .saturate(35%);
+    .opacity(0.3);
     .transition(all 0.5s ease)
   }
   &:hover .btn-toolbar {
+    .saturate(100%);
     .opacity(1);
   }
   &:hover li.tag {
@@ -151,6 +157,9 @@ li.tag {
     height: auto;
     line-height: 30px;
   }
+  .btn-toolbar {
+    height: auto;
+  }
 }
 
 @media (min-width: @screen-sm-min) {
@@ -161,9 +170,8 @@ li.tag {
   button[data-toggle="offcanvas"] {
     display: none;
   }
-  .note p {
-    height: 150px;
-    line-height: 25px;
+  .btn-toolbar {
+    height: 22px;
   }
 }
 

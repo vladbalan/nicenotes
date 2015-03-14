@@ -18,5 +18,11 @@ Template.note.events({
 Template.note.helpers({
 	tagsArray: function() {
 		return (!! this.tags && this.tags.length > 0) ? this.tags.split(',') : [];
-	}
+	},
+  ownsDocument: function() {
+    return ownsDocument(Meteor.user()._id, this);
+  },
+  hasWritePermission: function() {
+    return hasWritePermission(Meteor.user()._id, this);
+  }
 });
