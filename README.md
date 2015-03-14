@@ -30,22 +30,25 @@ That's it!
 
 ### Live demo
 
-> [nicenotes.meteor.com](http://nicenotes.meteor.com)
+> [![alt text](http://nicenotes.meteor.com/images/logo.png "nicenotes.meteor.com")](http://nicenotes.meteor.com)
 
 ### Using NiceNotes
 
 1. `Create an account ✔`
 2. `Create a note ✔`
 3. `Add tags ✔`
-4. Share with friends *(under development)*
+4. `Share with friends ✔`
 
-*(Pro tip: Try out the __awesome search feature__)*
+*(ProTip: Try out the __awesome search feature__)*
 
 ### Todo's
 
 - ~~Users may create note documents (consisting of a name and content property)~~
 - ~~Users may add 'tags' to their note documents~~
 - ~~Users may search by name/tag to find note documents~~
-- Users may share (read or read/write) their documents with other users by email address.
-- Users should be able to see and search a list of both own and shared documents.
+- ~~Users may share (read or read/write) their documents with other users by email address.~~
+- ~~Users should be able to see and search a list of both own and shared documents.~~
+- Create tests
+- Optimize performance
+- Customized search
 
